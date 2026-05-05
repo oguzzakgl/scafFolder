@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antigravity | Project Scaffolder</title>
+    <meta name="description" content="Profesyonel proje klasör yapısı oluşturucu.">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style/main.css">
+</head>
+<body>
+    <div id="app">
+        <div class="glass-container">
+            <main class="split-view">
+                <!-- Sol Panel: Ayarlar -->
+                <div class="settings-panel">
+                    <section class="step-card" id="step-1">
+                        <h3>Proje Detayları</h3>
+                        <div class="input-group">
+                            <label for="project-name">Proje Adı</label>
+                            <input type="text" id="project-name" placeholder="örn: my-awesome-app">
+                        </div>
+                        <div class="input-group">
+                            <label for="project-type">Proje Tipi</label>
+                            <select id="project-type">
+                                <option value="web-app">1. Web Uygulaması</option>
+                                <option value="mobile-flutter">2. Mobil Uygulama</option>
+                                <option value="full-stack">3. Full Stack</option>
+                                <option value="api-only">4. API Only</option>
+                                <option value="desktop-electron">5. Masaüstü</option>
+                                <option value="cli-tool">6. CLI Tool</option>
+                                <option value="ai-ml">7. AI/ML Projesi</option>
+                                <option value="blockchain-web3">8. Blockchain/Web3</option>
+                                <option value="microservices">9. Microservices</option>
+                                <option value="library-pkg">10. Library/Package</option>
+                                <option value="minimal">11. Minimal</option>
+                            </select>
+                        </div>
+                    </section>
+
+                    <section class="step-card" id="step-2">
+                        <h3>İnşa Et</h3>
+                        <button id="btn-scaffold" class="btn-scaffold">Masaüstünde Oluştur</button>
+                    </section>
+                </div>
+
+                <!-- Sağ Panel: Önizleme ve Düzenleme -->
+                <div class="preview-panel">
+                    <div class="preview-header">
+                        <div class="header-left">
+                            <h3>Şablon Tasarımı</h3>
+                            <div class="toolbar">
+                                <button id="btn-undo" class="btn-tool" title="Geri Al">↩</button>
+                                <button id="btn-reset" class="btn-tool" title="Sıfırla">⟲</button>
+                            </div>
+                        </div>
+                        <!-- Üst buton kaldırıldı -->
+                    </div>
+                    <div id="template-tree" class="tree-container">
+                        <!-- JS ile dolacak -->
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <!-- Modern Ekleme Modalı (Gelişmiş) -->
+    <div id="modal-folder" class="modal-overlay">
+        <div class="modal-content glass-container">
+            <h3 id="modal-title">Yeni Öğe Ekle</h3>
+            <p id="modal-parent-text" style="font-size: 0.8rem; color: var(--accent); margin-bottom: 1rem;"></p>
+            
+            <div class="type-selector">
+                <label class="type-option">
+                    <input type="radio" name="item-type" value="folder" checked>
+                    <span>📁 Klasör</span>
+                </label>
+                <label class="type-option">
+                    <input type="radio" name="item-type" value="file">
+                    <span>📄 Dosya</span>
+                </label>
+            </div>
+
+            <input type="text" id="input-new-folder" placeholder="İsim girin...">
+            
+            <div class="modal-actions">
+                <button id="btn-modal-cancel" class="btn-secondary">İptal</button>
+                <button id="btn-modal-add" class="btn-primary">Ekle</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

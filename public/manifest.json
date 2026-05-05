@@ -1,0 +1,17 @@
+{
+  "name": "Antigravity Scaffolder",
+  "short_name": "Scaffolder",
+  "description": "Professional Project Directory Scaffolder",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#6366f1",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/5968/5968322.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
