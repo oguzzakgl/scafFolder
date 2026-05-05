@@ -35,4 +35,3 @@ Bu uygulama iki parçadan oluşur: Arayüz ve Dosya Motoru. **İkisini de aynı 
 -   **Ajan Entegrasyonu:** Her proje `.agents/` klasörüyle (16 uzman rolü) birlikte doğar.
 
 ---
-Built with Antigravity Standards.
